@@ -3,14 +3,14 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hermes-engine"
+name = "Soteria-engine"
 version = "1.0.0"
 description = "Universal Multimodal Recommendation and Ranking Intelligence Engine"
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
 authors = [
-    {name = "Devendra Ghori"}
+    {name = "Harmit Bhaliya"}
 ]
 keywords = ["recommendation", "ranking", "multimodal", "retrieval", "deep-learning"]
 classifiers = [

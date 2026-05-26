@@ -1,4 +1,4 @@
-name: Hermes Recommendation Model
+name: Soteria Recommendation Model
 version: 1.0.0
 description: A multimodal, hybrid-graph recommendation system using listwise learning-to-rank and shadow LLM evaluations.
 metrics:

@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hermes-ranking
+  name: Soteria-ranking
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hermes-ranking
+      app: Soteria-ranking
   template:
     metadata:
       labels:
-        app: hermes-ranking
+        app: Soteria-ranking
     spec:
       containers:
       - name: ranking-service
-        image: hermes/ranking:latest
+        image: Soteria/ranking:latest
         resources:
           requests:
             cpu: "8"
@@ -33,10 +33,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hermes-ranking-svc
+  name: Soteria-ranking-svc
 spec:
   selector:
-    app: hermes-ranking
+    app: Soteria-ranking
   ports:
     - protocol: TCP
       port: 80

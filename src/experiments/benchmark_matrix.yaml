@@ -1,4 +1,4 @@
-name: Hermes Multi Domain Benchmark Matrix
+name: Soteria Multi Domain Benchmark Matrix
 version: '1.0'
 domains:
 - movies

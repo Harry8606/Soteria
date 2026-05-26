@@ -242,7 +242,7 @@ export default function App() {
 
       <nav className="top-bar fade-in" aria-label="Primary">
         <div className="brand-container">
-          <h1 className="brand-title">HERMES</h1>
+          <h1 className="brand-title">Soteria</h1>
           <span className="brand-subtitle">Universal Intelligence Protocol</span>
         </div>
         <div className="status-pill">
@@ -382,8 +382,8 @@ export default function App() {
                             <span className="bar-value">{pct}%</span>
                           </div>
 
-                          <button className="ask-hermes-btn" onClick={(e) => { e.stopPropagation(); askAbout(item.title) }}>
-                            Ask Hermes about this
+                          <button className="ask-Soteria-btn" onClick={(e) => { e.stopPropagation(); askAbout(item.title) }}>
+                            Ask Soteria about this
                           </button>
 
                           <div className="sub-section">
@@ -418,7 +418,7 @@ export default function App() {
                 <div className="chat-header">
                   <div className="chat-avatar">H</div>
                   <div>
-                    <div className="chat-name">Hermes</div>
+                    <div className="chat-name">Soteria</div>
                     <div className="chat-status-text">
                       Universal Intelligence
                       {detectedDomain && (
@@ -449,7 +449,7 @@ export default function App() {
                     className="compose-input"
                     ref={chatInputRef}
                     type="text"
-                    placeholder="Ask Hermes anything..."
+                    placeholder="Ask Soteria anything..."
                     value={chatInput}
                     onChange={(e) => setChatInput(e.target.value)}
                     disabled={isChatting}

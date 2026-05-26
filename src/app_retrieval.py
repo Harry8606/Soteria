@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from src.services.recommendation_service import RecommendationService
 from pathlib import Path
 
-app = FastAPI(title="Hermes Retrieval Service")
+app = FastAPI(title="Soteria Retrieval Service")
 base_path = Path(__file__).resolve().parent.parent
 recommender = RecommendationService(base_path / "main_data.csv")
 

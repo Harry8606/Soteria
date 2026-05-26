@@ -30,9 +30,9 @@ RUN --mount=type=bind,from=builder,source=/app/wheels,target=/wheels,ro pip inst
 
 COPY . .
 
-RUN useradd -m -s /bin/bash hermes
-RUN chown -R hermes:hermes /app
-USER hermes
+RUN useradd -m -s /bin/bash Soteria
+RUN chown -R Soteria:Soteria /app
+USER Soteria
 
 EXPOSE 8080
 

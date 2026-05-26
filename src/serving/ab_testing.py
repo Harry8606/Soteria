@@ -8,7 +8,7 @@ class ExperimentGroup(BaseModel):
     model_version: str
 
 class ABTestingFramework:
-    def __init__(self, salt: str = "hermes_salt_2026"):
+    def __init__(self, salt: str = "Soteria_salt_2026"):
         self.salt = salt
         self.experiments: Dict[str, Dict[str, float]] = {
             "ranking_v2_test": {

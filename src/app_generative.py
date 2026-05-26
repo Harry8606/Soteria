@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from typing import List
 from src.generative.conversational_agent import ConversationalAgent
 
-app = FastAPI(title="Hermes Generative Service")
+app = FastAPI(title="Soteria Generative Service")
 agent = ConversationalAgent()
 
 class ChatRequest(BaseModel):

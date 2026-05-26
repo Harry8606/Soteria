@@ -1,4 +1,4 @@
-app = 'hermesai'
+app = 'Soteriaai'
 primary_region = 'iad'
 
 [build]

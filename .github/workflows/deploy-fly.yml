@@ -35,7 +35,7 @@ jobs:
         run: |
           set -euo pipefail
           BACKEND_APP=uni-intel-core-backend
-          FRONTEND_APP=hermesai
+          FRONTEND_APP=Soteriaai
           BASE="${SMOKE_BASE_URL:-https://${FRONTEND_APP}.fly.dev}"
           deployed_be=0
           deployed_fe=0

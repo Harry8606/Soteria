@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hermes-retrieval
+  name: Soteria-retrieval
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: hermes-retrieval
+      app: Soteria-retrieval
   template:
     metadata:
       labels:
-        app: hermes-retrieval
+        app: Soteria-retrieval
     spec:
       containers:
       - name: retrieval-service
-        image: hermes/retrieval:latest
+        image: Soteria/retrieval:latest
         resources:
           requests:
             cpu: "4"
@@ -31,10 +31,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hermes-retrieval-svc
+  name: Soteria-retrieval-svc
 spec:
   selector:
-    app: hermes-retrieval
+    app: Soteria-retrieval
   ports:
     - protocol: TCP
       port: 80

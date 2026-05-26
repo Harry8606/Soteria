@@ -18,7 +18,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     spark = SparkSession.builder \
-        .appName("HermesDataIngestion") \
+        .appName("SoteriaDataIngestion") \
         .config("spark.executor.memory", "16g") \
         .config("spark.driver.memory", "8g") \
         .getOrCreate()

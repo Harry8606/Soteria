@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hermes-media-v2'
+const CACHE_NAME = 'Soteria-media-v2'
 const PATHS = new Set([
   '/media/FF1.webm',
   '/media/ff1.mp4',

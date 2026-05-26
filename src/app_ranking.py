@@ -5,7 +5,7 @@ from src.services.recommendation_service import RecommendationService
 from src.domain.models import Candidate
 from pathlib import Path
 
-app = FastAPI(title="Hermes Ranking Service")
+app = FastAPI(title="Soteria Ranking Service")
 base_path = Path(__file__).resolve().parent.parent
 recommender = RecommendationService(base_path / "main_data.csv")
 

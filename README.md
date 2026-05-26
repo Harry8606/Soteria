@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="media/images/0_banner.png" alt="Hermes Universal Recommendation Framework" width="100%"/>
+<img src="media/images/0_banner.png" alt="Soteria Universal Recommendation Framework" width="100%"/>
 
-# HERMES
+# Soteria
 
 **Universal Multi-Modal Generative DLTR Recommendation Framework**
 
@@ -55,7 +55,7 @@
 | [Search Results](#search-results) | Vector and text hybrid retrieval interface | [System Preview](#system-preview) |
 | [Cold Start Resolution](#cold-start-resolution) | Model powered zero-shot recommendations | [System Preview](#system-preview) |
 | [List Expansion](#list-expansion) | Fairness policy and diversity re-ranking | [System Preview](#system-preview) |
-| [Hermes Agent](#hermes-agent) | The conversational intelligence interface | [System Preview](#system-preview) |
+| [Soteria Agent](#Soteria-agent) | The conversational intelligence interface | [System Preview](#system-preview) |
 
 * * *
 
@@ -70,7 +70,7 @@ In the modern commercial landscape, recommendation systems dictate human attenti
 3. **Black-Box Frustration**: Users are handed ranked lists with zero explanation of why the algorithms chose those specific items, leading to distrust and algorithmic fatigue.
 
 ### My Contributions
-I designed Hermes as a unified, domain-agnostic intelligence layer. This is not a college prototype; it is an industrial-grade, PhD-level execution that combines:
+I designed Soteria as a unified, domain-agnostic intelligence layer. This is not a college prototype; it is an industrial-grade, PhD-level execution that combines:
 * **Model Vision Integration**: Translating raw pixels into rich semantic vectors to instantly resolve the cold-start problem.
 * **Deep Learning to Rank (DLTR)**: Implementing advanced ListMLE objectives and survival modeling (DEFER/DEFUSE) to correct for delayed feedback.
 * **Mathematically Grounded LLMs**: Utilizing the attribution matrices of the neural ranker to constrain a large language model, allowing the system to explain its exact reasoning to the user without hallucination.
@@ -82,7 +82,7 @@ I designed Hermes as a unified, domain-agnostic intelligence layer. This is not 
 
 ### Application Interfaces
 
-The following visuals demonstrate the Hermes ecosystem, from multi-domain ingestion to conversational reasoning.
+The following visuals demonstrate the Soteria ecosystem, from multi-domain ingestion to conversational reasoning.
 
 <table>
 <tr>
@@ -145,7 +145,7 @@ The following visuals demonstrate the Hermes ecosystem, from multi-domain ingest
 
 **Conversational Intelligence**
 
-<img src="media/images/6_hermes.png" alt="Hermes Agent" width="100%"/>
+<img src="media/images/6_Soteria.png" alt="Soteria Agent" width="100%"/>
 
 *The LLM reasoning layer, isolated and protected by strict anti-prompt-injection middleware.*
 
@@ -155,20 +155,20 @@ The following visuals demonstrate the Hermes ecosystem, from multi-domain ingest
 
 ### Grounded Explainability
 
-Hermes does not hallucinate. It mathematically translates neural network attribution into human language.
+Soteria does not hallucinate. It mathematically translates neural network attribution into human language.
 
 <table>
 <tr>
 <td width="50%" align="center">
 
-<img src="media/images/8_hermes_introduction.png" alt="Agent Intro" width="100%"/>
+<img src="media/images/8_Soteria_introduction.png" alt="Agent Intro" width="100%"/>
 
 *The agent initializing its context window with the user's historical feature matrix.*
 
 </td>
 <td width="50%" align="center">
 
-<img src="media/images/7_hermes_response.png" alt="Grounded Response" width="100%"/>
+<img src="media/images/7_Soteria_response.png" alt="Grounded Response" width="100%"/>
 
 *Synthesizing the exact ListMLE ranking weights into a natural language explanation.*
 
@@ -177,7 +177,7 @@ Hermes does not hallucinate. It mathematically translates neural network attribu
 </table>
 
 <div align="center">
-<img src="media/images/9_hermes_intelligance.png" alt="Interactive Intelligence" width="80%"/>
+<img src="media/images/9_Soteria_intelligance.png" alt="Interactive Intelligence" width="80%"/>
 
 *Interactive feedback loop: The user's text constraint dynamically updates the retrieval index for the next request.*
 </div>
@@ -220,24 +220,24 @@ The results from these three independent streams are non-deterministic and often
 
 ### Figure 2.2: Universal Data Ingestion and Multimodal Pipeline
 
-The intelligence of Hermes is strictly bounded by the quality of its feature store. The ingestion pipeline acts as a rigorous barrier against data corruption.
+The intelligence of Soteria is strictly bounded by the quality of its feature store. The ingestion pipeline acts as a rigorous barrier against data corruption.
 
 <div align="center">
 <img src="media/figures/f4.png" alt="Universal Data Ingestion and Multimodal Pipeline" width="100%"/>
 </div>
 
 **Data Contracts and Hard Validation**
-Every payload entering the system must pass through a strict Pydantic model validation schema. This schema enforces structural integrity. It guarantees that regardless of whether the source is a movie database or a shopping catalog, the resulting object inside Hermes possesses a unified taxonomy. Invalid payloads are immediately dropped, preventing downstream cascading failures in the PyTorch training loops.
+Every payload entering the system must pass through a strict Pydantic model validation schema. This schema enforces structural integrity. It guarantees that regardless of whether the source is a movie database or a shopping catalog, the resulting object inside Soteria possesses a unified taxonomy. Invalid payloads are immediately dropped, preventing downstream cascading failures in the PyTorch training loops.
 
 **The Model Extraction Engine**
-Once validated, the media assets are asynchronously fetched and passed to the Multimodal Feature Extraction tier. For visual data, Hermes leverages Model architecture. Unlike traditional ResNet architectures that only provide abstract convolutional features, Model is a sequence-to-sequence model. We prompt it dynamically to generate dense captions, isolate background concepts, and identify specific foreground objects. The output sequence is then pooled into a unified dense embedding. 
+Once validated, the media assets are asynchronously fetched and passed to the Multimodal Feature Extraction tier. For visual data, Soteria leverages Model architecture. Unlike traditional ResNet architectures that only provide abstract convolutional features, Model is a sequence-to-sequence model. We prompt it dynamically to generate dense captions, isolate background concepts, and identify specific foreground objects. The output sequence is then pooled into a unified dense embedding. 
 
 **Immutable Feature Store**
 The extracted vectors are not stored in standard relational tables. They are written to an immutable Feature Store. This immutability is critical for reproducibility. If a model was trained on Version 1 of the feature set, those features must never be overwritten, or the offline evaluation metrics become instantly corrupted. The Feature Store handles versioning, point-in-time reads, and batch serving for the training pipelines.
 
 ### Figure 2.3: Generative Grounding and Guardrail Subsystem
 
-Integrating Large Language Models into a production system introduces massive security and hallucination risks. Hermes employs a strict state-machine architecture to sandbox the generative layer.
+Integrating Large Language Models into a production system introduces massive security and hallucination risks. Soteria employs a strict state-machine architecture to sandbox the generative layer.
 
 <div align="center">
 <img src="media/figures/f5.png" alt="Generative Grounding and Guardrail Subsystem" width="100%"/>
@@ -323,7 +323,7 @@ Standard A/B testing is insufficient because it is susceptible to network effect
 ### Code Organization
 
 ```text
-hermes/
+Soteria/
 ├── backend/                          # Python Backend (Intelligence Core)
 │   ├── app/
 │   │   ├── api/                      # FastAPI endpoint routing
@@ -433,7 +433,7 @@ def build_grounded_prompt(user_query: str, ranked_item: UniversalAsset, attribut
     Constructs a strictly bound context for the explanation agent.
     """
     return f"""
-    You are Hermes, a recommendation reasoning engine.
+    You are Soteria, a recommendation reasoning engine.
     Explain to the user why the following item was recommended.
     
     ITEM: {ranked_item.title}
@@ -455,7 +455,7 @@ def build_grounded_prompt(user_query: str, ranked_item: UniversalAsset, attribut
 
 ## Theoretical and Mathematical Foundations (Deep Dive)
 
-The distinction between a commercial prototype and an elite PhD-level framework lies entirely in the mathematics. Relying on out-of-the-box libraries abstracts away the fundamental truths of the data distribution. Hermes was built by peeling back those abstractions and writing the core loss functions, survival estimators, and causal adjustments from mathematical first principles.
+The distinction between a commercial prototype and an elite PhD-level framework lies entirely in the mathematics. Relying on out-of-the-box libraries abstracts away the fundamental truths of the data distribution. Soteria was built by peeling back those abstractions and writing the core loss functions, survival estimators, and causal adjustments from mathematical first principles.
 
 ### 1. The Mathematics of Deep Learning to Rank (DLTR)
 
@@ -467,7 +467,7 @@ L_{BCE} = - \sum_{i=1}^{N} y_i \log(\hat{y}_i) + (1 - y_i) \log(1 - \hat{y}_i)
 
 This is fundamentally flawed. A user interface is a sorted list. A user does not evaluate item $i$ in a vacuum; they evaluate item $i$ relative to item $j$ sitting right next to it. Optimizing for absolute probability destroys the relative ordering accuracy.
 
-Hermes abandons BCE in favor of Listwise objective functions, specifically relying on **ListMLE (Maximum Likelihood Estimation for Lists)** based on the Plackett-Luce probability model.
+Soteria abandons BCE in favor of Listwise objective functions, specifically relying on **ListMLE (Maximum Likelihood Estimation for Lists)** based on the Plackett-Luce probability model.
 
 Instead of looking at one item, ListMLE evaluates the entire slate $X$ of size $n$, and a perfect ground-truth sorting permutation $\pi$. The probability of that specific permutation occurring, given the neural network's scoring function $f(x)$, is:
 
@@ -475,7 +475,7 @@ Instead of looking at one item, ListMLE evaluates the entire slate $X$ of size $
 P(\pi | X) = \prod_{i=1}^{n} \frac{\exp(f(x_{\pi(i)}))}{\sum_{k=i}^{n} \exp(f(x_{\pi(k)}))}
 ```
 
-To optimize the neural network, I minimize the negative log-likelihood of this permutation. The exact loss function implemented in the Hermes PyTorch backend is:
+To optimize the neural network, I minimize the negative log-likelihood of this permutation. The exact loss function implemented in the Soteria PyTorch backend is:
 
 ```math
 \mathcal{L}_{ListMLE}(X, \pi) = - \sum_{i=1}^{n} \log \left( \frac{\exp(f(x_{\pi(i)}))}{\sum_{k=i}^{n} \exp(f(x_{\pi(k)}))} \right)
@@ -487,7 +487,7 @@ To optimize the neural network, I minimize the negative log-likelihood of this p
 
 In production, positive signals arrive late. A user may click a product today but purchase it three days later. If the model trains iteratively every night, it sees a "negative" label on day one and severely punishes the item. This delay bias destroys long-term value generation.
 
-Hermes implements **DEFER (Delayed Feedback Modeling with Exponential Survival)**. I modeled the problem using Survival Analysis mathematics. 
+Soteria implements **DEFER (Delayed Feedback Modeling with Exponential Survival)**. I modeled the problem using Survival Analysis mathematics. 
 
 Let $T$ be the true, unobserved delay time before a conversion. Let $E$ be the elapsed time since the impression. We observe a conversion indicator $Y=1$ only if $T \leq E$. If we observe $Y=0$, it means either the user will never convert, or they just have not converted *yet* ($T > E$).
 
@@ -509,7 +509,7 @@ If $E$ is very small (the impression just happened), $W$ drops close to zero, ef
 
 Offline evaluation is the deadliest trap in recommendation engineering. If you calculate the Mean Squared Error on historical logs, you are testing against an inherently biased dataset. The logging policy only showed the user items it *thought* they would like. You have zero data on what would have happened if you showed them something else.
 
-To solve this, Hermes utilizes Causal Inference, specifically **Inverse Propensity Scoring (IPS)** mixed with a **Direct Method (DM)** to form a **Doubly Robust (DR) Estimator**.
+To solve this, Soteria utilizes Causal Inference, specifically **Inverse Propensity Scoring (IPS)** mixed with a **Direct Method (DM)** to form a **Doubly Robust (DR) Estimator**.
 
 Let $\pi_0(a|x)$ be the probability that the historical logging policy showed item $a$ to user $x$. Let $\pi_{new}(a|x)$ be the probability under our new proposed DLTR model. Let $r$ be the observed reward (e.g., watch time).
 
@@ -554,7 +554,7 @@ If the user searches for "visually stunning red dress," the query vector $q$ mat
 
 An algorithm that maximizes global NDCG will inevitably bury minority creators because the gradient updates are skewed by the majority class density. 
 
-Hermes enforces deterministic fairness via the **Exposure Parity Constraint**. Let $G_1$ and $G_2$ represent two cohorts of creators (e.g., mainstream vs. independent). Let $Rel(x)$ be the intrinsic relevance score of an item output by the DLTR pipeline. 
+Soteria enforces deterministic fairness via the **Exposure Parity Constraint**. Let $G_1$ and $G_2$ represent two cohorts of creators (e.g., mainstream vs. independent). Let $Rel(x)$ be the intrinsic relevance score of an item output by the DLTR pipeline. 
 
 The system calculates the Expected Exposure $E_{exp}$ for each cohort, discounted by position $k$:
 
@@ -595,7 +595,7 @@ The Nginx proxy serves as the sole public gateway. It aggressively drops malform
 
 ## Installation & Quick Start
 
-Because of the heavy containerization, getting Hermes running locally is remarkably straightforward.
+Because of the heavy containerization, getting Soteria running locally is remarkably straightforward.
 
 **Prerequisites**:
 * Docker 24+ and Docker Compose
@@ -604,8 +604,8 @@ Because of the heavy containerization, getting Hermes running locally is remarka
 
 **Step 1: Clone the Repository**
 ```bash
-git clone https://github.com/devghori1264/hermes.git
-cd hermes
+git clone https://github.com/devghori1264/Soteria.git
+cd Soteria
 ```
 
 **Step 2: Environment Configuration**
@@ -627,7 +627,7 @@ Navigate to `http://localhost:8080`. The Nginx proxy will automatically route th
 
 ## Future Work & Roadmap
 
-Hermes is a living framework. The immediate next horizons include:
+Soteria is a living framework. The immediate next horizons include:
 
 1. **Cross-Domain Transfer Graph Networks**: Replacing the linear retrieval blending orchestrator with a deeply nested Graph Neural Network (GNN). I intend to mathematically prove that behavior learned in the movie domain can dramatically uplift zero-shot precision in the e-commerce domain via edge message passing.
 2. **Online Streaming Updates**: Transitioning the DLTR training loop from batch processing to continuous online learning, updating embedding weights in real-time as interaction telemetry streams into the cluster.
@@ -636,7 +636,7 @@ Hermes is a living framework. The immediate next horizons include:
 
 ## Closing Thoughts
 
-Building Hermes has been an incredible journey. It required deep dives into linear algebra, distributed systems architecture, causal statistics, and frontend performance optimization. 
+Building Soteria has been an incredible journey. It required deep dives into linear algebra, distributed systems architecture, causal statistics, and frontend performance optimization. 
 
 I poured my heart into this code. I obsessed over every latency spike, every skewed gradient update, and every misaligned pixel. I built this to prove that a solo developer, armed with the right research and an uncompromising standard for quality, can build systems that rival the biggest tech companies in the world.
 
@@ -646,4 +646,4 @@ If you have questions, look at the code. The math speaks for itself.
 
 * * *
 
-*“Quality is not an act, it is a habit. Hermes is built with the uncompromising standard that algorithms should serve humanity, clearly and transparently.”*
+*“Quality is not an act, it is a habit. Soteria is built with the uncompromising standard that algorithms should serve humanity, clearly and transparently.”*

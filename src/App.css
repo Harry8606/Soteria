@@ -533,7 +533,7 @@
   text-align: right;
 }
 
-.ask-hermes-btn {
+.ask-Soteria-btn {
   background: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -547,7 +547,7 @@
   margin-bottom: 1.25rem;
 }
 
-.ask-hermes-btn:hover {
+.ask-Soteria-btn:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.2);
 }

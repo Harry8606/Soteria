@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hermesai.fly.dev/sitemap.xml
+Sitemap: https://Soteriaai.fly.dev/sitemap.xml

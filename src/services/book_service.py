@@ -28,7 +28,7 @@ class BookSearchResult:
     truth_context: list[str]
 
 
-USER_AGENT = "Hermes/1.0 (Universal Intelligence Platform)"
+USER_AGENT = "Soteria/1.0 (Universal Intelligence Platform)"
 BASE_URL = "https://openlibrary.org"
 MIN_REQUEST_INTERVAL = 1.1
 

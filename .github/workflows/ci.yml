@@ -133,11 +133,11 @@ jobs:
           load: true
           cache-from: type=gha
           cache-to: type=gha,mode=max
-          tags: hermes-frontend:ci
+          tags: Soteria-frontend:ci
       - name: nginx-template-smoke
         run: |
           docker rm -f fe-smoke 2>/dev/null || true
-          docker run -d --name fe-smoke -p 18080:8080 -e BACKEND_INTERNAL_URL=http://127.0.0.1:9 -e INTERNAL_GATE_TOKEN=smoke hermes-frontend:ci
+          docker run -d --name fe-smoke -p 18080:8080 -e BACKEND_INTERNAL_URL=http://127.0.0.1:9 -e INTERNAL_GATE_TOKEN=smoke Soteria-frontend:ci
           sleep 2
           curl -fsS http://127.0.0.1:18080/ | head -c 200 | grep -q root
           docker rm -f fe-smoke
@@ -185,7 +185,7 @@ jobs:
         run: |
           set -euo pipefail
           BACKEND_APP=uni-intel-core-backend
-          FRONTEND_APP=hermesai
+          FRONTEND_APP=Soteriaai
           BASE="${SMOKE_BASE_URL:-https://${FRONTEND_APP}.fly.dev}"
           deployed_be=0
           deployed_fe=0

@@ -3,7 +3,7 @@ import json
 import time
 import requests
 
-USER_AGENT = "Hermes/1.0 (Universal Intelligence Platform)"
+USER_AGENT = "Soteria/1.0 (Universal Intelligence Platform)"
 
 SEED_ARTISTS = [
     "Eminem", "Taylor Swift", "Drake", "The Beatles", "Radiohead",
