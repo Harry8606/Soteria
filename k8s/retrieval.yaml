@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Soteria-retrieval
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: Soteria-retrieval
+  template:
+    metadata:
+      labels:
+        app: Soteria-retrieval
+    spec:
+      containers:
+      - name: retrieval-service
+        image: Soteria/retrieval:latest
+        resources:
+          requests:
+            cpu: "4"
+            memory: "16Gi"
+          limits:
+            cpu: "8"
+            memory: "32Gi"
+        ports:
+        - containerPort: 8000
+        env:
+        - name: SERVICE_ROLE
+          value: "retrieval"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: Soteria-retrieval-svc
+spec:
+  selector:
+    app: Soteria-retrieval
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
